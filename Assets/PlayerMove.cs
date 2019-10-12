@@ -29,6 +29,8 @@ public class PlayerMove : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        //I don't think these boundaries are necessary
+        /*
         // tests if player is trying to move past width boundaries
         if (((transform.position.x <= minWidth) && (movement.x <= -1)) || ((transform.position.x >= maxWidth) && (movement.x >= 1)))
         {
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         {
             movement.y = 0;
         }
+        */
     }
 
     void FixedUpdate()
