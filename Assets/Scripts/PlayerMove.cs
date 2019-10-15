@@ -11,8 +11,10 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed;
     Vector2 movement; // tracks direction the player is trying to move in. 
 
+    //Variables deemed irrelevant
+    /*
     public float minHeight, maxHeight;
-    public float minWidth, maxWidth;
+    public float minWidth, maxWidth;     */
 
     public float horDir; //-1=left, 1=right
     public float verDir; //-1=down, 1=up
