@@ -95,8 +95,8 @@ public class UseKey : MonoBehaviour
 
             if (unlockable && Input.GetKeyDown(KeyCode.E)) // destroys a wall and uses up key when E is pressed if unlockable
             {
-                Destroy(adjacentWall);
-                Destroy(closestObj);
+                adjacentWall.SetActive(false);
+                closestObj.SetActive(false);
             }
         }
     }
