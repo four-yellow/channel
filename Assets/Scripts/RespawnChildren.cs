@@ -15,16 +15,16 @@ public class RespawnChildren : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit");
-        if(collision.otherCollider.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             foreach (GameObject g in children)
             {
+                g.SetActive(false);
                 g.SetActive(true);
             }
         }
-
     }
 }
