@@ -10,16 +10,17 @@ public class RespawnChildren : MonoBehaviour
     {
         foreach (Transform t in transform)
         {
-            Debug.Log("I made a child");
+            //Debug.Log("I made a childl");
             children.Add(t.gameObject);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit");
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<UseKey>().grabbed = false;
+            //Debug.Log("Hit");
             foreach (GameObject g in children)
             {
                 g.SetActive(false);
