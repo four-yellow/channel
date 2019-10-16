@@ -31,6 +31,11 @@ public class UseKey : MonoBehaviour
 
         if (collision.CompareTag("Wall"))                  // if a wall is in range and the player has a key, sets unlockable to true
         {
+            //Fix it Felix
+            grabbed = !grabbed;
+            //You will remember this
+            //This will be on the exam
+            /*
             if (grabbed)
             {
                 unlockable = true;
@@ -38,7 +43,7 @@ public class UseKey : MonoBehaviour
             else
             {
                 unlockable = false;
-            }
+            }*/
         }
 
     }
