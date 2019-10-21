@@ -11,12 +11,15 @@ public class UseKey : MonoBehaviour
 {
     public bool grabbed; // whether the player is holding a key
     public static bool unlockable; // whether the player can destroy a wall
+    public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
     public GameObject adjacentWall; // a wall to destroy near the player
+    public static bool hunger; // true if parent is hungry, false otherwise
 
     private void Start()
     {
+        hunger = true;
         keysInRange = new List<GameObject>();
     }
 
@@ -32,20 +35,17 @@ public class UseKey : MonoBehaviour
         if (collision.CompareTag("Wall"))                  // if a wall is in range and the player has a key, sets unlockable to true
         {
             //Fix it Felix
-            grabbed = !grabbed;
+            //grabbed = !grabbed;
             //You will remember this
             //This will be on the exam
-            /*
-            if (grabbed)
-            {
-                unlockable = true;
-            }
-            else
-            {
-                unlockable = false;
-            }*/
+
+            unlockable = grabbed;
         }
 
+        if (collision.CompareTag("parent"))
+        {
+            feedable = grabbed;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -55,8 +55,10 @@ public class UseKey : MonoBehaviour
             keysInRange.Remove(collision.gameObject);
         }
 
-        unlockable &= !collision.CompareTag("Wall");       // sets unlockable to false if no walls leave the player's range
+        unlockable &= !collision.CompareTag("Wall");       // sets unlockable to false if walls leave the player's range
         adjacentWall = null;
+
+        feedable &= !collision.CompareTag("Wall");       // sets feedable to false if parent leaves the player's range
     }
 
     private void Update()
@@ -98,10 +100,15 @@ public class UseKey : MonoBehaviour
                 closestObj.transform.position = holdpoint.position;
             }
 
-            if (unlockable && Input.GetKeyDown(KeyCode.E)) // destroys a wall and uses up key when E is pressed if unlockable
+            if (unlockable && Input.GetKeyDown(KeyCode.E) && closestObj.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
             {
                 adjacentWall.SetActive(false);
                 closestObj.SetActive(false);
+            }
+            else if (feedable && Input.GetKeyDown(KeyCode.E) && hunger && closestObj.GetComponent<Food_tag>() != null)
+            {
+                hunger = false;
+                Destroy(closestObj);
             }
         }
     }
