@@ -10,8 +10,9 @@ public class ParentMove : MonoBehaviour
     private static readonly float[] parentMoveToY = { -3, -3 };
     private float upBound, downBound, rightBound, leftBound;
     public int count;
-    //private Vector3 goal = new Vector3(parentMoveToX[parentMoveToX.Length], parentMoveToY[parentMoveToY.Length]);
-
+    public bool obstacleInWay; // raycast hit
+    public Vector3 direction;
+    public float rayDistance = 2f;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class ParentMove : MonoBehaviour
 
     private void Update()
     {
+        Physics2D.queriesStartInColliders = false;
         hungry = UseKey.hunger;
         if (!hungry)
         {
@@ -30,53 +32,26 @@ public class ParentMove : MonoBehaviour
             leftBound = parentMoveToX[count] - (float).1;
 
             Vector3 checkpoint = new Vector3(parentMoveToX[count], parentMoveToY[count]);
-            Vector3 direction = (checkpoint - transform.position).normalized;
+            direction = (checkpoint - transform.position).normalized;
+            obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
+
 
             if (transform.position.y >= upBound || transform.position.y <= downBound ||
                 transform.position.x >= rightBound || transform.position.x <= leftBound)
-                transform.Translate(direction * speed * Time.deltaTime);
+            {
+                if (!obstacleInWay)
+                    transform.Translate(direction * speed * Time.deltaTime);
+            }
             else if (count != 1) { count++; }
 
             hungry |= count == parentMoveToX.Length + 1; // change parentMoveToX.Length+1 to split path into sections
         }
+    }
 
-
-        //UseKey.hunger |= transform.position == goal;
-
-
-
-
-
-
-
-        //hungry = UseKey.hunger;
-        //if (!hungry)
-        //{
-        //    int i = 0;
-        //    Vector3 goal = new Vector3(parentMoveToX[parentMoveToX.Length], parentMoveToY[parentMoveToY.Length]);
-        //    Vector3 checkpoint = new Vector3(parentMoveToX[0], parentMoveToY[0]);
-        //    Vector3 direction = (checkpoint - transform.position).normalized;
-
-        //    if (transform.position != checkpoint)
-        //        transform.Translate(direction * speed * Time.deltaTime);
-        //    else i++;
-
-        //    UseKey.hunger |= transform.position == goal;
-        //}
-
-
-
-
-        //for (int i = 0; i < parentMoveToX.Length; i++)
-        //{
-        //    Vector3 goal = new Vector3(parentMoveToX[i], parentMoveToY[i]);
-
-        //    while (transform.position != goal)
-        //    {
-        //        Vector3 direction = goal - transform.position;
-        //        transform.Translate(direction * speed * Time.deltaTime);
-        //    }
-        //}
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, direction);
     }
 }
 
