@@ -6,8 +6,8 @@ public class ParentMove : MonoBehaviour
 {
     public bool hungry;
     public float speed;
-    private static readonly float[] parentMoveToX = { 8, 0 };
-    private static readonly float[] parentMoveToY = { -3, -3 };
+    public float[] parentMoveToX = { 8, 0 };
+    public float[] parentMoveToY = { -3, -3 };
     private float upBound, downBound, rightBound, leftBound;
     public int count;
     public bool obstacleInWay; // raycast hit
@@ -34,7 +34,6 @@ public class ParentMove : MonoBehaviour
             Vector3 checkpoint = new Vector3(parentMoveToX[count], parentMoveToY[count]);
             direction = (checkpoint - transform.position).normalized;
             obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
-
 
             if (transform.position.y >= upBound || transform.position.y <= downBound ||
                 transform.position.x >= rightBound || transform.position.x <= leftBound)
