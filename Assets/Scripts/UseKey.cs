@@ -19,7 +19,7 @@ public class UseKey : MonoBehaviour
 
     private void Start()
     {
-        hunger = true;
+        hunger = false;
         keysInRange = new List<GameObject>();
     }
 

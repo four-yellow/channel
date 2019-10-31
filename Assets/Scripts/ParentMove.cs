@@ -4,79 +4,72 @@ using UnityEngine;
 
 public class ParentMove : MonoBehaviour
 {
-    public bool hungry;
-    public float speed;
-    private static readonly float[] parentMoveToX = { 8, 0 };
-    private static readonly float[] parentMoveToY = { -3, -3 };
-    private float upBound, downBound, rightBound, leftBound;
-    public int count;
-    //private Vector3 goal = new Vector3(parentMoveToX[parentMoveToX.Length], parentMoveToY[parentMoveToY.Length]);
 
+    private bool hungry;
+    private float speed = 3;
+    public (GameObject, bool)[] parentMoveToXY;
+    private float upBound, downBound, rightBound, leftBound;
+    private int count;
+    private bool obstacleInWay; // raycast hit
+    private Vector3 direction;
+    public float rayDistance = 2f;
+
+    //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
+    //is hungry at the start of this path.
+    struct Coord
+    {
+        public float x;
+        public float y;
+        public bool startHungry;
+    }
+
+
+    private Coord[] Path;
 
     private void Start()
     {
+        //Load our path info
+        Path = new Coord[parentMoveToXY.Length];
+        for (int i = 0; i < parentMoveToXY.Length; i++)
+        {
+            (GameObject g, bool b) = parentMoveToXY[i];
+            Vector3 v = g.transform.position.normalized;
+            (Path[i].x, Path[i].y, Path[i].startHungry) = (v.x, v.y, b); 
+        }
+
         count = 0;
-        hungry = UseKey.hunger;
+        hungry = Path[count].startHungry;
     }
 
     private void Update()
     {
-        hungry = UseKey.hunger;
+        Physics2D.queriesStartInColliders = false;
         if (!hungry)
         {
-            upBound = parentMoveToY[count] + (float).1;
-            downBound = parentMoveToY[count] - (float).1;
-            rightBound = parentMoveToX[count] + (float).1;
-            leftBound = parentMoveToX[count] - (float).1;
+            upBound = Path[count].y + (float).1;
+            downBound = Path[count].y - (float).1;
+            rightBound = Path[count].x + (float).1;
+            leftBound = Path[count].x - (float).1;
 
-            Vector3 checkpoint = new Vector3(parentMoveToX[count], parentMoveToY[count]);
-            Vector3 direction = (checkpoint - transform.position).normalized;
+            Vector3 checkpoint = new Vector3(Path[count].x, Path[count].y);
+            direction = (checkpoint - transform.position).normalized;
+            obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
 
             if (transform.position.y >= upBound || transform.position.y <= downBound ||
                 transform.position.x >= rightBound || transform.position.x <= leftBound)
-                transform.Translate(direction * speed * Time.deltaTime);
-            else if (count != 1) { count++; }
+            {
+                if (!obstacleInWay)
+                    transform.Translate(direction * speed * Time.deltaTime);
+            }
+            else { count++;  hungry = Path[count].startHungry; }
 
-            hungry |= count == parentMoveToX.Length + 1; // change parentMoveToX.Length+1 to split path into sections
         }
+    }
 
-
-        //UseKey.hunger |= transform.position == goal;
-
-
-
-
-
-
-
-        //hungry = UseKey.hunger;
-        //if (!hungry)
-        //{
-        //    int i = 0;
-        //    Vector3 goal = new Vector3(parentMoveToX[parentMoveToX.Length], parentMoveToY[parentMoveToY.Length]);
-        //    Vector3 checkpoint = new Vector3(parentMoveToX[0], parentMoveToY[0]);
-        //    Vector3 direction = (checkpoint - transform.position).normalized;
-
-        //    if (transform.position != checkpoint)
-        //        transform.Translate(direction * speed * Time.deltaTime);
-        //    else i++;
-
-        //    UseKey.hunger |= transform.position == goal;
-        //}
-
-
-
-
-        //for (int i = 0; i < parentMoveToX.Length; i++)
-        //{
-        //    Vector3 goal = new Vector3(parentMoveToX[i], parentMoveToY[i]);
-
-        //    while (transform.position != goal)
-        //    {
-        //        Vector3 direction = goal - transform.position;
-        //        transform.Translate(direction * speed * Time.deltaTime);
-        //    }
-        //}
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, direction);
     }
 }
 
