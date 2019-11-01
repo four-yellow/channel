@@ -14,12 +14,11 @@ public class UseKey : MonoBehaviour
     public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
-    public GameObject adjacentWall; // a wall to destroy near the player
-    public static bool hunger; // true if parent is hungry, false otherwise
+    private GameObject adjacentWall; // a wall to destroy near the player
+    public bool hunger;
 
     private void Start()
     {
-        hunger = false;
         keysInRange = new List<GameObject>();
     }
 
@@ -108,7 +107,7 @@ public class UseKey : MonoBehaviour
             else if (feedable && Input.GetKeyDown(KeyCode.E) && hunger && closestObj.GetComponent<Food_tag>() != null)
             {
                 hunger = false;
-                Destroy(closestObj);
+                closestObj.SetActive(false);
             }
         }
     }
