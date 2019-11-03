@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1471760565260952135}
   - component: {fileID: 6152374597727898999}
   - component: {fileID: -8574918842197088784}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIn: 0
   parentIn: 0
+  levelName: 

@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ParentMove : MonoBehaviour
 {
-
-    private bool hungry;
+    [System.Serializable]
+    public struct WayPoint
+    {
+        public GameObject game;
+        public bool bl;
+    }
+    public bool hungry;
     private float speed = 3;
-    public (GameObject, bool)[] parentMoveToXY;
+    public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
     private int count;
     private bool obstacleInWay; // raycast hit
@@ -32,9 +37,8 @@ public class ParentMove : MonoBehaviour
         Path = new Coord[parentMoveToXY.Length];
         for (int i = 0; i < parentMoveToXY.Length; i++)
         {
-            (GameObject g, bool b) = parentMoveToXY[i];
-            Vector3 v = g.transform.position.normalized;
-            (Path[i].x, Path[i].y, Path[i].startHungry) = (v.x, v.y, b); 
+            Vector3 v = parentMoveToXY[i].game.transform.position;
+            (Path[i].x, Path[i].y, Path[i].startHungry) = (v.x, v.y, parentMoveToXY[i].bl); 
         }
 
         count = 0;
@@ -64,6 +68,11 @@ public class ParentMove : MonoBehaviour
             else { count++;  hungry = Path[count].startHungry; }
 
         }
+    }
+
+    public void changeHunger(bool h)
+    {
+        hungry = h;
     }
 
     private void OnDrawGizmos()

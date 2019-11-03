@@ -7,14 +7,14 @@ public class ToNextLevel : MonoBehaviour
 {
     public bool playerIn;
     public bool parentIn;
-    public int levelCount;
+    public string levelName;
 
     // Update is called once per frame
     void Update()
     {
         if (playerIn && parentIn)
         {
-            SceneManager.LoadScene(levelCount);
+            SceneManager.LoadScene(levelName);
         }
     }
 
