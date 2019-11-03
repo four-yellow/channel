@@ -14,7 +14,9 @@ public class UseKey : MonoBehaviour
     public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
-    private List<GameObject>wallsInRange; // a wall to destroy near the player
+    private List<GameObject>wallsInRange; // all walls nearby player
+    private GameObject closestWall; //closest wall to player
+    public boolRef h;
 
     private void Start()
     {
@@ -100,10 +102,10 @@ public class UseKey : MonoBehaviour
                 indexW = i;
             }
         }
-
+        if (distancesW.Length > 0)
+            closestWall = wallsInRange[indexW];
         if (distancesK.Length > 0)                          // checks that there are keys near the player     
         {
-            GameObject closestWall = wallsInRange[indexW];
             GameObject closestKey = keysInRange[indexK];
             if (Input.GetKeyDown(KeyCode.E))               // grabs/drops the key when E is pressed
             {
@@ -127,8 +129,9 @@ public class UseKey : MonoBehaviour
                 closestWall.SetActive(false);
                 closestKey.SetActive(false);
             }
-            else if (feedable && Input.GetKeyDown(KeyCode.E) && closestKey.GetComponent<Food_tag>() != null)
+            else if (feedable && Input.GetKeyDown(KeyCode.E) && h.Val&& closestKey.GetComponent<Food_tag>() != null)
             {
+                h.Val = false;
                 closestKey.SetActive(false);
             }
         }

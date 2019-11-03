@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931988, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1296191130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a4ede82516b645629dc8dfa7c47d1a4, type: 3}
 --- !u!1001 &44152681
@@ -1091,6 +1096,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9c7e30fc6c64c429d244bdcd911564, type: 3}
+--- !u!1 &1296191130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3142570762706237318, guid: 719dcbe0da3804b65a79668712a4c57e,
+    type: 3}
+  m_PrefabInstance: {fileID: 258885228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297823428
 GameObject:
   m_ObjectHideFlags: 0
