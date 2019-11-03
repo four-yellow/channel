@@ -10,7 +10,7 @@ public class ParentMove : MonoBehaviour
         public GameObject game;
         public bool bl;
     }
-    public bool hungry;
+    public static bool hungry;
     private float speed = 3;
     public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
@@ -70,9 +70,13 @@ public class ParentMove : MonoBehaviour
         }
     }
 
-    public void changeHunger(bool h)
+    public static void changeHunger(bool h)
     {
         hungry = h;
+    }
+    public bool giveHunger()
+    {
+        return hungry;
     }
 
     private void OnDrawGizmos()
