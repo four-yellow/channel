@@ -48,7 +48,7 @@ public class ParentMove : MonoBehaviour
     private void Update()
     {
         Physics2D.queriesStartInColliders = false;
-        if (!h.Val)
+        if (!h.Val && count<parentMoveToXY.Length)
         {
             upBound = Path[count].y + (float).1;
             downBound = Path[count].y - (float).1;
@@ -65,7 +65,7 @@ public class ParentMove : MonoBehaviour
                 if (!obstacleInWay)
                     transform.Translate(direction * speed * Time.deltaTime);
             }
-            else { count++;  h.Val = Path[count].startHungry; }
+            else { count++;  if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
 
         }
     }
