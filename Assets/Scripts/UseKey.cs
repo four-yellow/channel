@@ -86,7 +86,7 @@ public class UseKey : MonoBehaviour
 
         //-----------------------------------WE ARE DOING WALL STUFF HERE-----------------------------------//
 
-        float[] distancesW = new float[keysInRange.Count];  // find distances from player of each wall in range
+        float[] distancesW = new float[wallsInRange.Count];  // find distances from player of each wall in range
         for (int i = 0; i < distancesW.Length; i++)
         {
             distancesW[i] = Vector3.Distance(wallsInRange[i].transform.position, this.gameObject.transform.position);
@@ -124,7 +124,7 @@ public class UseKey : MonoBehaviour
                 closestKey.transform.position = holdpoint.position;
             }
 
-            if (unlockable && Input.GetKeyDown(KeyCode.E) && closestKey.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
+            if (unlockable && Input.GetKeyDown(KeyCode.E) && closestWall != null && closestKey.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
             {
                 closestWall.SetActive(false);
                 closestKey.SetActive(false);
