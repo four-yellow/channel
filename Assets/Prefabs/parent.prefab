@@ -142,9 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877eead018c1d4ff4a94a1528a534bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungry: 0
-  speed: 3
-  count: 0
-  obstacleInWay: 0
-  direction: {x: 0, y: 0, z: 0}
+  parentMoveToXY: []
   rayDistance: 2
+  h: {fileID: 11400000, guid: 86999cc13ac734d7583780ee3c23e2a5, type: 2}

@@ -10,7 +10,6 @@ public class ParentMove : MonoBehaviour
         public GameObject game;
         public bool bl;
     }
-    public bool hungry;
     private float speed = 3;
     public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
@@ -18,6 +17,7 @@ public class ParentMove : MonoBehaviour
     private bool obstacleInWay; // raycast hit
     private Vector3 direction;
     public float rayDistance = 2f;
+    public boolRef h;
 
     //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
     //is hungry at the start of this path.
@@ -42,13 +42,13 @@ public class ParentMove : MonoBehaviour
         }
 
         count = 0;
-        hungry = Path[count].startHungry;
+        h.Val = Path[count].startHungry;
     }
 
     private void Update()
     {
         Physics2D.queriesStartInColliders = false;
-        if (!hungry)
+        if (!h.Val && count<parentMoveToXY.Length)
         {
             upBound = Path[count].y + (float).1;
             downBound = Path[count].y - (float).1;
@@ -65,14 +65,9 @@ public class ParentMove : MonoBehaviour
                 if (!obstacleInWay)
                     transform.Translate(direction * speed * Time.deltaTime);
             }
-            else { count++;  hungry = Path[count].startHungry; }
+            else { count++;  if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
 
         }
-    }
-
-    public void changeHunger(bool h)
-    {
-        hungry = h;
     }
 
     private void OnDrawGizmos()
