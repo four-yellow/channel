@@ -122,4 +122,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIn: 0
   parentIn: 0
-  levelCount: 0
+  levelName: 

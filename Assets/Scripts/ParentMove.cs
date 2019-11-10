@@ -4,34 +4,58 @@ using UnityEngine;
 
 public class ParentMove : MonoBehaviour
 {
-    public bool hungry;
-    public float speed;
-    public float[] parentMoveToX = { 8, 0 };
-    public float[] parentMoveToY = { -3, -3 };
+    [System.Serializable]
+    public struct WayPoint
+    {
+        public GameObject game;
+        public bool bl;
+    }
+    private float speed = 3;
+    public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
-    public int count;
-    public bool obstacleInWay; // raycast hit
-    public Vector3 direction;
+    private int count;
+    private bool obstacleInWay; // raycast hit
+    private Vector3 direction;
     public float rayDistance = 2f;
+    public boolRef h;
+
+    //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
+    //is hungry at the start of this path.
+    struct Coord
+    {
+        public float x;
+        public float y;
+        public bool startHungry;
+    }
+
+
+    private Coord[] Path;
 
     private void Start()
     {
+        //Load our path info
+        Path = new Coord[parentMoveToXY.Length];
+        for (int i = 0; i < parentMoveToXY.Length; i++)
+        {
+            Vector3 v = parentMoveToXY[i].game.transform.position;
+            (Path[i].x, Path[i].y, Path[i].startHungry) = (v.x, v.y, parentMoveToXY[i].bl); 
+        }
+
         count = 0;
-        hungry = UseKey.hunger;
+        h.Val = Path[count].startHungry;
     }
 
     private void Update()
     {
         Physics2D.queriesStartInColliders = false;
-        hungry = UseKey.hunger;
-        if (!hungry)
+        if (!h.Val && count<parentMoveToXY.Length)
         {
-            upBound = parentMoveToY[count] + (float).1;
-            downBound = parentMoveToY[count] - (float).1;
-            rightBound = parentMoveToX[count] + (float).1;
-            leftBound = parentMoveToX[count] - (float).1;
+            upBound = Path[count].y + (float).1;
+            downBound = Path[count].y - (float).1;
+            rightBound = Path[count].x + (float).1;
+            leftBound = Path[count].x - (float).1;
 
-            Vector3 checkpoint = new Vector3(parentMoveToX[count], parentMoveToY[count]);
+            Vector3 checkpoint = new Vector3(Path[count].x, Path[count].y);
             direction = (checkpoint - transform.position).normalized;
             obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
 
@@ -41,9 +65,8 @@ public class ParentMove : MonoBehaviour
                 if (!obstacleInWay)
                     transform.Translate(direction * speed * Time.deltaTime);
             }
-            else if (count != 1) { count++; }
+            else { count++;  if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
 
-            hungry |= count == parentMoveToX.Length + 1; // change parentMoveToX.Length+1 to split path into sections
         }
     }
 

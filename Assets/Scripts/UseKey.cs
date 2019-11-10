@@ -14,19 +14,19 @@ public class UseKey : MonoBehaviour
     public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
-    public GameObject adjacentWall; // a wall to destroy near the player
-    public static bool hunger; // true if parent is hungry, false otherwise
+    private List<GameObject>wallsInRange; // all walls nearby player
+    private GameObject closestWall; //closest wall to player
+    public boolRef h;
 
     private void Start()
     {
-        hunger = true;
         keysInRange = new List<GameObject>();
+        wallsInRange = new List<GameObject>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        adjacentWall = collision.gameObject;               // stores a wall if it enters the collider of the player
-
+                                                            // stores a wall if it enters the collider of the player
         if (collision.CompareTag("grabbable"))             // adds each key in the vicinity to an array
         {
             keysInRange.Add(collision.gameObject);
@@ -34,10 +34,7 @@ public class UseKey : MonoBehaviour
 
         if (collision.CompareTag("Wall"))                  // if a wall is in range and the player has a key, sets unlockable to true
         {
-            //Fix it Felix
-            //grabbed = !grabbed;
-            //You will remember this
-            //This will be on the exam
+            wallsInRange.Add(collision.gameObject);
 
             unlockable = grabbed;
         }
@@ -55,34 +52,61 @@ public class UseKey : MonoBehaviour
             keysInRange.Remove(collision.gameObject);
         }
 
-        unlockable &= !collision.CompareTag("Wall");       // sets unlockable to false if walls leave the player's range
-        adjacentWall = null;
-
-        feedable &= !collision.CompareTag("Wall");       // sets feedable to false if parent leaves the player's range
+        if (collision.CompareTag("Wall"))// sets unlockable to false if walls leave the player's range
+        {
+            wallsInRange.Remove(collision.gameObject);
+            unlockable = false;
+        }
+            
+        
+        if (collision.CompareTag("parent")) // sets feedable to false if parent leaves the player's range
+        {
+            feedable = false;
+        }
     }
 
     private void Update()
     {
-        float[] distances = new float[keysInRange.Count];  // find distances from player of each key in range
-        for (int i = 0; i < distances.Length; i++)
+        float[] distancesK = new float[keysInRange.Count];  // find distances from player of each key in range
+        for (int i = 0; i < distancesK.Length; i++)
         {
-            distances[i] = Vector3.Distance(keysInRange[i].transform.position, this.gameObject.transform.position);
+            distancesK[i] = Vector3.Distance(keysInRange[i].transform.position, this.gameObject.transform.position);
         }
 
         float minDistance = 999999;                        // find key with minimum distance
-        int index = 0;
-        for (int i = 0; i < distances.Length; i++)
+        int indexK = 0;
+        for (int i = 0; i < distancesK.Length; i++)
         {
-            if (distances[i] < minDistance)
+            if (distancesK[i] < minDistance)
             {
-                minDistance = distances[i];
-                index = i;
+                minDistance = distancesK[i];
+                indexK = i;
             }
         }
 
-        if (distances.Length > 0)                          // checks that there are keys near the player     
+        //-----------------------------------WE ARE DOING WALL STUFF HERE-----------------------------------//
+
+        float[] distancesW = new float[wallsInRange.Count];  // find distances from player of each wall in range
+        for (int i = 0; i < distancesW.Length; i++)
         {
-            GameObject closestObj = keysInRange[index];
+            distancesW[i] = Vector3.Distance(wallsInRange[i].transform.position, this.gameObject.transform.position);
+        }
+
+        minDistance = 999999;                                            // find wall with minimum distance
+        int indexW = 0;
+        for (int i = 0; i < distancesW.Length; i++)
+        {
+            if (distancesW[i] < minDistance)
+            {
+                minDistance = distancesW[i];
+                indexW = i;
+            }
+        }
+        if (distancesW.Length > 0)
+            closestWall = wallsInRange[indexW];
+        if (distancesK.Length > 0)                          // checks that there are keys near the player     
+        {
+            GameObject closestKey = keysInRange[indexK];
             if (Input.GetKeyDown(KeyCode.E))               // grabs/drops the key when E is pressed
             {
                 if (!grabbed)
@@ -97,18 +121,18 @@ public class UseKey : MonoBehaviour
 
             if (grabbed)                                   // moves key to the holdpoint of the player
             {
-                closestObj.transform.position = holdpoint.position;
+                closestKey.transform.position = holdpoint.position;
             }
 
-            if (unlockable && Input.GetKeyDown(KeyCode.E) && closestObj.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
+            if (unlockable && Input.GetKeyDown(KeyCode.E) && closestWall != null && closestKey.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
             {
-                adjacentWall.SetActive(false);
-                closestObj.SetActive(false);
+                closestWall.SetActive(false);
+                closestKey.SetActive(false);
             }
-            else if (feedable && Input.GetKeyDown(KeyCode.E) && hunger && closestObj.GetComponent<Food_tag>() != null)
+            else if (feedable && Input.GetKeyDown(KeyCode.E) && h.Val&& closestKey.GetComponent<Food_tag>() != null)
             {
-                hunger = false;
-                Destroy(closestObj);
+                h.Val = false;
+                closestKey.SetActive(false);
             }
         }
     }

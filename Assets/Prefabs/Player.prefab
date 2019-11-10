@@ -209,4 +209,4 @@ MonoBehaviour:
   grabbed: 0
   holdpoint: {fileID: 4721935641742061351}
   keysInRange: []
-  adjacentWall: {fileID: 0}
+  h: {fileID: 11400000, guid: 86999cc13ac734d7583780ee3c23e2a5, type: 2}
