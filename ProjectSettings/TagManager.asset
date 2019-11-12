@@ -48,3 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Usables
+    uniqueID: 3132698031
+    locked: 0
+  - name: Upper Realm
+    uniqueID: 2328745155
+    locked: 0

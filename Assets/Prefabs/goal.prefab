@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1448992343011481663}
   - component: {fileID: 1471760565260952135}
-  - component: {fileID: 6152374597727898999}
   - component: {fileID: -8574918842197088784}
+  - component: {fileID: 5938247383406713937}
   m_Layer: 2
   m_Name: goal
   m_TagString: Untagged
@@ -82,7 +82,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6152374597727898999
+--- !u!114 &-8574918842197088784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498717321890747947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4460c3f9933e64c2c9e0bb54ad97cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIn: 0
+  parentIn: 0
+  levelName: 
+--- !u!61 &5938247383406713937
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,27 +114,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &-8574918842197088784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4498717321890747947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4460c3f9933e64c2c9e0bb54ad97cb8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIn: 0
-  parentIn: 0
-  levelName: 
