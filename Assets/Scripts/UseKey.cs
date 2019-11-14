@@ -111,6 +111,7 @@ public class UseKey : MonoBehaviour
             {
                 if (!grabbed)
                 {
+                    closestKey.GetComponent<LayerManager>().overRide = true;
                     grabbed = true;
                 }
                 else
@@ -122,8 +123,7 @@ public class UseKey : MonoBehaviour
 
             if (grabbed)                                   // moves key to the holdpoint of the player
             {
-                closestKey.GetComponent<LayerManager>().overRide = true;
-                closestKey.GetComponent<LayerManager>().MyY = this.gameObject.GetComponent<LayerManager>().MyY + 1;
+                closestKey.GetComponent<SpriteRenderer>().sortingOrder = this.GetComponent<SpriteRenderer>().sortingOrder+1;
                 closestKey.transform.position = holdpoint.position;
             }
 

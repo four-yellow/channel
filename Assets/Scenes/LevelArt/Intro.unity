@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.7
 --- !u!1 &319679906
 GameObject:
@@ -239,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.85
 --- !u!61 &319679910
 BoxCollider2D:
@@ -359,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &519553335
 GameObject:
@@ -418,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.5
 --- !u!212 &519553338
 SpriteRenderer:
@@ -822,7 +826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Adjust: -0.83
+  overRide: 0
+  Adjust: -0.86
 --- !u!61 &782732797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -942,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &920226852
 GameObject:
@@ -1351,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.86
 --- !u!61 &1162660988
 BoxCollider2D:
@@ -1471,6 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &1201284104
 GameObject:
@@ -1808,6 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1001 &1632968030
 PrefabInstance:
@@ -1978,6 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.5
 --- !u!61 &1653007978
 BoxCollider2D:
@@ -2171,6 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1001 &1820302132
 PrefabInstance:
@@ -2344,6 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.7
 --- !u!1 &2023950818
 GameObject:
