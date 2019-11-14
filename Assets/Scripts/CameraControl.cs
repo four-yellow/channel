@@ -30,7 +30,7 @@ public class CameraControl : MonoBehaviour
         yMax = UpWall.position.y - ycameraOffset;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player.transform.position.y < yMin && player.transform.position.x < xMin) // bottom left corner
         {

@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &120061968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &162757649
 GameObject:
@@ -471,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &186957936
 GameObject:
@@ -565,6 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!4 &233393903 stripped
 Transform:
@@ -954,6 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &594375343
 GameObject:
@@ -1136,12 +1140,12 @@ PrefabInstance:
     - target: {fileID: 4693595040378473485, guid: 64f4b1555f4014f6f9fe0fae084264cb,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -1162269265
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693595040378473485, guid: 64f4b1555f4014f6f9fe0fae084264cb,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f4b1555f4014f6f9fe0fae084264cb, type: 3}
@@ -1838,6 +1842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: -0.76
 --- !u!1 &1727879121
 GameObject:
@@ -1932,6 +1937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1 &1790120026
 GameObject:
@@ -2198,6 +2204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overRide: 0
   Adjust: 0
 --- !u!1001 &2083078226
 PrefabInstance:

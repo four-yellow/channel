@@ -115,12 +115,15 @@ public class UseKey : MonoBehaviour
                 }
                 else
                 {
+                    closestKey.GetComponent<LayerManager>().overRide = false;
                     grabbed = false;
                 }
             }
 
             if (grabbed)                                   // moves key to the holdpoint of the player
             {
+                closestKey.GetComponent<LayerManager>().overRide = true;
+                closestKey.GetComponent<LayerManager>().MyY = this.gameObject.GetComponent<LayerManager>().MyY + 1;
                 closestKey.transform.position = holdpoint.position;
             }
 
