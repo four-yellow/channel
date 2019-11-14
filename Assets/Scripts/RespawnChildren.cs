@@ -19,7 +19,7 @@ public class RespawnChildren : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<UseKey>().grabbed = false;
+            other.gameObject.GetComponent<UseKey>().ToggleGrabbed(false);
             //Debug.Log("Hit");
             foreach (GameObject g in children)
             {

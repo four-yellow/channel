@@ -16,6 +16,7 @@ public class UseKey : MonoBehaviour
     public List<GameObject> keysInRange; // all keys nearby player
     private List<GameObject>wallsInRange; // all walls nearby player
     private GameObject closestWall; //closest wall to player
+    private GameObject closestKey;
     public boolRef h;
 
     private void Start()
@@ -106,20 +107,10 @@ public class UseKey : MonoBehaviour
             closestWall = wallsInRange[indexW];
         if (distancesK.Length > 0)                          // checks that there are keys near the player     
         {
-            GameObject closestKey = keysInRange[indexK];
+            closestKey = keysInRange[indexK];
+
             if (Input.GetKeyDown(KeyCode.E))               // grabs/drops the key when E is pressed
-            {
-                if (!grabbed)
-                {
-                    closestKey.GetComponent<LayerManager>().overRide = true;
-                    grabbed = true;
-                }
-                else
-                {
-                    closestKey.GetComponent<LayerManager>().overRide = false;
-                    grabbed = false;
-                }
-            }
+                ToggleGrabbed(!grabbed);
 
             if (grabbed)                                   // moves key to the holdpoint of the player
             {
@@ -138,5 +129,11 @@ public class UseKey : MonoBehaviour
                 closestKey.SetActive(false);
             }
         }
+    }
+
+    public void ToggleGrabbed (bool b)
+    {
+        closestKey.GetComponent<LayerManager>().overRide = b;
+        grabbed = b;
     }
 }
