@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &27643408 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7271574760599433675, guid: 28f38b51670ec44fea04d6f52de713b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 542338450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192019119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4721935642156931999, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
@@ -579,46 +573,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 192019119}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: cameraOffset
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: ycameraOffset
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: UpWall
-      value: 
-      objectReference: {fileID: 1774534307}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: DownWall
-      value: 
-      objectReference: {fileID: 2078429503}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: LeftWall
-      value: 
-      objectReference: {fileID: 1723494237}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: RightWall
-      value: 
-      objectReference: {fileID: 27643408}
-    - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: smoothTime
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b56023e78f45c1bbd4592ce891680, type: 3}
 --- !u!1001 &542338450
@@ -966,7 +920,7 @@ GameObject:
   - component: {fileID: 920226859}
   m_Layer: 0
   m_Name: Bair s1 background
-  m_TagString: Untagged
+  m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1028,8 +982,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920226852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: -0.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.004, y: 1.004, z: 1.004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2041,12 +1995,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0025835, y: 0.54356146}
   m_EdgeRadius: 0
---- !u!4 &1723494237 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7271574760599433675, guid: 28f38b51670ec44fea04d6f52de713b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1301270731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765450415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,12 +2030,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1774534307 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7271574760599433675, guid: 28f38b51670ec44fea04d6f52de713b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1477383485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801644611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,9 +2356,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2078429503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7271574760599433675, guid: 28f38b51670ec44fea04d6f52de713b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820302132}
-  m_PrefabAsset: {fileID: 0}
