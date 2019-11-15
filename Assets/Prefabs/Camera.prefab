@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  smoothTime: 1
+  smoothTime: 0.3
   LeftWall: {fileID: 0}
   RightWall: {fileID: 0}
   UpWall: {fileID: 0}
