@@ -15,7 +15,8 @@ public class CameraControl : MonoBehaviour
 
     void Start()
     {
-        transform.position = GameObject.FindWithTag("Player").transform.position;
+        transform.position = new Vector3(GameObject.FindWithTag("Player").transform.position.x,
+                                         GameObject.FindWithTag("Player").transform.position.y, -6);
 
         float vertExtent = GetComponent<Camera>().orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
