@@ -944,6 +944,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
+        type: 3}
+      propertyPath: orthographic size
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
         type: 3}
       propertyPath: player
@@ -984,11 +989,6 @@ PrefabInstance:
       propertyPath: RightWall
       value: 
       objectReference: {fileID: 642269402}
-    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: orthographic size
-      value: 3.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b56023e78f45c1bbd4592ce891680, type: 3}
 --- !u!1 &554487646
@@ -2292,7 +2292,7 @@ GameObject:
   - component: {fileID: 1987067691}
   m_Layer: 0
   m_Name: Bair p1a
-  m_TagString: Untagged
+  m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

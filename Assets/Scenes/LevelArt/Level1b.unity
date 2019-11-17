@@ -1877,7 +1877,7 @@ GameObject:
   - component: {fileID: 785849144}
   m_Layer: 0
   m_Name: Bair s2 background
-  m_TagString: Untagged
+  m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2168,6 +2168,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
         type: 3}
       propertyPath: player
@@ -2207,11 +2212,6 @@ PrefabInstance:
         type: 3}
       propertyPath: smoothTime
       value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: orthographic
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b56023e78f45c1bbd4592ce891680, type: 3}
@@ -2944,6 +2944,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8574918842197088784, guid: ab9c7e30fc6c64c429d244bdcd911564,
+        type: 3}
+      propertyPath: levelName
+      value: Level2a
+      objectReference: {fileID: 0}
+    - target: {fileID: -8574918842197088784, guid: ab9c7e30fc6c64c429d244bdcd911564,
+        type: 3}
+      propertyPath: parentIn
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9c7e30fc6c64c429d244bdcd911564, type: 3}
