@@ -9,9 +9,6 @@ public class CameraControl : MonoBehaviour
     public float yMin;
     public float yMax;
 
-    //Honestly don't know how to save this person
-    private bool isGracehere;
-
     private Vector3 pos;
     private Transform target;
     private SpriteRenderer spriteBounds;
