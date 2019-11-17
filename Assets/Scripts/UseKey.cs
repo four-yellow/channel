@@ -14,20 +14,22 @@ public class UseKey : MonoBehaviour
     public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
-    private List<GameObject>wallsInRange; // all walls nearby player
+    private List<GameObject> wallsInRange; // all walls nearby player
     private GameObject closestWall; //closest wall to player
     private GameObject closestKey;
     public boolRef h;
 
     private void Start()
     {
+        SoundManagerScript.PlaySound("Door Open");
+
         keysInRange = new List<GameObject>();
         wallsInRange = new List<GameObject>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-                                                            // stores a wall if it enters the collider of the player
+        // stores a wall if it enters the collider of the player
         if (collision.CompareTag("grabbable"))             // adds each key in the vicinity to an array
         {
             keysInRange.Add(collision.gameObject);
@@ -58,8 +60,8 @@ public class UseKey : MonoBehaviour
             wallsInRange.Remove(collision.gameObject);
             unlockable = false;
         }
-            
-        
+
+
         if (collision.CompareTag("parent")) // sets feedable to false if parent leaves the player's range
         {
             feedable = false;
@@ -109,12 +111,16 @@ public class UseKey : MonoBehaviour
         {
             closestKey = keysInRange[indexK];
 
-            if (Input.GetKeyDown(KeyCode.E))               // grabs/drops the key when E is pressed
-                ToggleGrabbed(!grabbed);
-
-            if (grabbed)                                   // moves key to the holdpoint of the player
+            if (Input.GetKeyDown(KeyCode.E))                // grabs/drops the key when E is pressed
             {
-                closestKey.GetComponent<SpriteRenderer>().sortingOrder = this.GetComponent<SpriteRenderer>().sortingOrder+1;
+                SoundManagerScript.PlaySound("Door Close");
+                ToggleGrabbed(!grabbed);
+            }
+
+
+            if (grabbed)                                    // moves key to the holdpoint of the player
+            {
+                closestKey.GetComponent<SpriteRenderer>().sortingOrder = this.GetComponent<SpriteRenderer>().sortingOrder + 1;
                 closestKey.transform.position = holdpoint.position;
             }
 
@@ -123,7 +129,7 @@ public class UseKey : MonoBehaviour
                 closestWall.SetActive(false);
                 closestKey.SetActive(false);
             }
-            else if (feedable && Input.GetKeyDown(KeyCode.E) && h.Val&& closestKey.GetComponent<Food_tag>() != null)
+            else if (feedable && Input.GetKeyDown(KeyCode.E) && h.Val && closestKey.GetComponent<Food_tag>() != null)
             {
                 h.Val = false;
                 closestKey.SetActive(false);
@@ -131,7 +137,7 @@ public class UseKey : MonoBehaviour
         }
     }
 
-    public void ToggleGrabbed (bool b)
+    public void ToggleGrabbed(bool b)
     {
         closestKey.GetComponent<LayerManager>().overRide = b;
         grabbed = b;
