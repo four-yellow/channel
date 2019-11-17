@@ -88,11 +88,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9077bc33fb58497db338a72a2f4d7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  smoothTime: 0.3
+  LeftWall: {fileID: 0}
+  RightWall: {fileID: 0}
+  UpWall: {fileID: 0}
+  DownWall: {fileID: 0}
   xMin: 0
   xMax: 0
   yMin: 0
   yMax: 0
-  orthographicCamera: {fileID: 1530017566332707354}
+  cameraOffset: 0
+  ycameraOffset: 0
 --- !u!81 &7615103836475971435
 AudioListener:
   m_ObjectHideFlags: 0
