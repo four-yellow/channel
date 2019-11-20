@@ -14,7 +14,7 @@ public class UseKey : MonoBehaviour
     public static bool feedable; // whether the player can feed parent
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
-    private List<GameObject> wallsInRange; // all walls nearby player
+    public List<GameObject> wallsInRange; // all walls nearby player
     private GameObject closestWall; //closest wall to player
     private GameObject closestKey;
     public boolRef h;
