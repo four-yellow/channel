@@ -21,8 +21,6 @@ public class UseKey : MonoBehaviour
 
     private void Start()
     {
-        SoundManagerScript.PlaySound("Door Open");
-
         keysInRange = new List<GameObject>();
         wallsInRange = new List<GameObject>();
     }
@@ -113,7 +111,6 @@ public class UseKey : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))                // grabs/drops the key when E is pressed
             {
-                SoundManagerScript.PlaySound("Door Close");
                 ToggleGrabbed(!grabbed);
             }
 
@@ -126,6 +123,7 @@ public class UseKey : MonoBehaviour
 
             if (unlockable && Input.GetKeyDown(KeyCode.E) && closestWall != null && closestKey.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
             {
+                SoundManagerScript.PlaySound("BairVines");
                 closestWall.SetActive(false);
                 closestKey.SetActive(false);
             }
@@ -141,5 +139,7 @@ public class UseKey : MonoBehaviour
     {
         closestKey.GetComponent<LayerManager>().overRide = b;
         grabbed = b;
+        if (b) SoundManagerScript.PlaySound("BairPickup");
+        else SoundManagerScript.PlaySound("BairDrop");
     }
 }
