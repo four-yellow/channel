@@ -725,11 +725,6 @@ PrefabInstance:
       propertyPath: RightWall
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: orthographic size
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5186090644658870187, guid: 930b56023e78f45c1bbd4592ce891680,
         type: 3}
       propertyPath: m_RootOrder
