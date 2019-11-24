@@ -10,19 +10,39 @@ public class DialogueScript : MonoBehaviour
 
     public GameObject speechBubble;
     public GameObject continueButton;
+    public bool dialogueStarted;
+
+    public bool speakable;
+
+    GameObject player;
+    UseKey keyScript;
 
     [TextArea]
     public string[] sentences; // array of sentences
 
     public int dialogueIndex; // which sentence you're on
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+        keyScript = player.GetComponent<UseKey>();
+        speakable = keyScript.parentSpeakable;
+
+    }
     //starts the speech bubble if you press space
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        speakable = keyScript.parentSpeakable;
+
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == false && speakable)
         {
             speechBubble.SetActive(true);
             StartDialogue();
+            dialogueStarted = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == true && speakable)
+        {
+            ContinueDialogue();
         }
     }
 
@@ -56,7 +76,10 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
+            dialogueText.text = string.Empty;
             speechBubble.SetActive(false);
+            dialogueStarted = false;
+            dialogueIndex = 0;
         }
     }
 }
