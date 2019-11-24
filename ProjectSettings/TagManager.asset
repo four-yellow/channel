@@ -9,6 +9,7 @@ TagManager:
   - parent
   - goal
   - background
+  - button
   layers:
   - Default
   - TransparentFX

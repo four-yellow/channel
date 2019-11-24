@@ -11,7 +11,8 @@ public class UseKey : MonoBehaviour
 {
     public bool grabbed; // whether the player is holding a key
     public static bool unlockable; // whether the player can destroy a wall
-    public static bool feedable; // whether the player can feed parent
+    public bool feedable; // whether the player can feed parent
+    public bool parentSpeakable;
     public Transform holdpoint; // point where player holds the key
     public List<GameObject> keysInRange; // all keys nearby player
     public List<GameObject> wallsInRange; // all walls nearby player
@@ -43,6 +44,7 @@ public class UseKey : MonoBehaviour
         if (collision.CompareTag("parent"))
         {
             feedable = grabbed;
+            parentSpeakable = true;
         }
     }
 
@@ -63,6 +65,7 @@ public class UseKey : MonoBehaviour
         if (collision.CompareTag("parent")) // sets feedable to false if parent leaves the player's range
         {
             feedable = false;
+            parentSpeakable = false;
         }
     }
 
