@@ -21,15 +21,18 @@ public class CameraControl : MonoBehaviour
         float vertExtent = GetComponent<Camera>().orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
 
-        spriteBounds = GameObject.FindWithTag("background").GetComponentInChildren<SpriteRenderer>();
+        GameObject bg = GameObject.FindWithTag("background");
+        spriteBounds = bg.GetComponentInChildren<SpriteRenderer>();
+        Vector3 bgPos = bg.GetComponent<Transform>().position;
+
 
         target = GameObject.FindWithTag("Player").transform;
 
-        //xMin = horzExtent - spriteBounds.sprite.bounds.size.x / 2.0f;
-        xMax = spriteBounds.sprite.bounds.size.x / 2.0f - horzExtent;
-        xMin = -1 * xMax;
-        yMin = vertExtent - spriteBounds.sprite.bounds.size.y / 2.0f;
-        yMax = spriteBounds.sprite.bounds.size.y / 2.0f - vertExtent;
+        xMin = horzExtent - (spriteBounds.sprite.bounds.size.x / 2.0f) + bgPos.x;
+        xMax = spriteBounds.sprite.bounds.size.x / 2.0f + bgPos.x - horzExtent;
+        //xMin = -spriteBounds.sprite.bounds.size.x / 2.0f - bgPos.x + horzExtent;
+        yMin = vertExtent - (spriteBounds.sprite.bounds.size.y / 2.0f) + bgPos.y;
+        yMax = spriteBounds.sprite.bounds.size.y / 2.0f + bgPos.y - vertExtent;
     }
 
     // Update is called once per frame
