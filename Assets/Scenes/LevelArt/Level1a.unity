@@ -1485,6 +1485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3331704745962602557, guid: dfd36b503b5164a3395366a967b77026,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3331704745962602555, guid: dfd36b503b5164a3395366a967b77026,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1557,6 +1562,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfd36b503b5164a3395366a967b77026, type: 3}
+--- !u!1 &1150540180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3331704745962602557, guid: dfd36b503b5164a3395366a967b77026,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150540179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196148375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,9 +2262,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
+      propertyPath: parentMoveToXY.Array.data[0].walls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
       propertyPath: parentMoveToXY.Array.data[0].game
       value: 
       objectReference: {fileID: 2143455441}
+    - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: parentMoveToXY.Array.data[0].walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 1150540180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719dcbe0da3804b65a79668712a4c57e, type: 3}
 --- !u!1 &1890509010 stripped
