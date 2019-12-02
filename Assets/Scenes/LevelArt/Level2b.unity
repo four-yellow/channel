@@ -2111,6 +2111,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1101813372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1140000030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3331704745962602557, guid: dfd36b503b5164a3395366a967b77026,
+    type: 3}
+  m_PrefabInstance: {fileID: 1532815612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1271921318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,6 +3514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
+      propertyPath: parentMoveToXY.Array.data[0].walls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
       propertyPath: parentMoveToXY.Array.data[0].game
       value: 
       objectReference: {fileID: 2045411868}
@@ -3521,6 +3532,11 @@ PrefabInstance:
       propertyPath: parentMoveToXY.Array.data[1].bl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: parentMoveToXY.Array.data[0].walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 1140000030}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719dcbe0da3804b65a79668712a4c57e, type: 3}
 --- !u!1001 &2017857317

@@ -12,6 +12,7 @@ public class LoadBounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Vector3 myPos = this.gameObject.GetComponent<Transform>().position;
         Bounds bounds = this.gameObject.GetComponent<SpriteRenderer>().sprite.bounds;
         float MinX = bounds.min.x;
         float MinY = bounds.min.y;
@@ -32,13 +33,13 @@ public class LoadBounds : MonoBehaviour
         GameObject rightWall = Instantiate(g, blank, q);
         Right = rightWall.GetComponent<BoxCollider2D>();
 
-        Top.offset = new Vector2(0, (height / 2f) + 1);
+        Top.offset = new Vector2(myPos.x, (height / 2f) + 1+myPos.y);
         Top.size = new Vector2(width, 2f);
-        Bottom.offset = new Vector2(0, -((height / 2f) + 1));
+        Bottom.offset = new Vector2(myPos.x, -((height / 2f) + 1)+myPos.y);
         Bottom.size = new Vector2(width, 2f);
-        Right.offset = new Vector2((width / 2f) + 1, 0);
+        Right.offset = new Vector2((width / 2f) + 1+myPos.x, myPos.y);
         Right.size = new Vector2(2f, height);
-        Left.offset = new Vector2(-((width / 2f) + 1), 0);
+        Left.offset = new Vector2(-((width / 2f) + 1)+myPos.x, myPos.y);
         Left.size = new Vector2(2f, height);
 
     }
