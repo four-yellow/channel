@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5938247383406713937}
   m_Layer: 2
   m_Name: goal
-  m_TagString: Untagged
+  m_TagString: goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
   playerIn: 0
   parentIn: 0
   levelName: 
+  animationPlay: 0
+  readyToTransition: 0
 --- !u!61 &5938247383406713937
 BoxCollider2D:
   m_ObjectHideFlags: 0
