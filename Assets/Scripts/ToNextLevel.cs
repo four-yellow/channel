@@ -8,13 +8,25 @@ public class ToNextLevel : MonoBehaviour
     public bool playerIn;
     public bool parentIn;
     public string levelName;
+    public bool animationPlay;
+    public bool readyToTransition;
 
     // Update is called once per frame
     void Update()
     {
         if (playerIn && parentIn)
         {
-            SceneManager.LoadScene(levelName);
+            readyToTransition = true;
+        }
+        else readyToTransition = false;
+
+        if (readyToTransition)
+        {
+            animationPlay = true;
+        }
+        else
+        {
+            animationPlay = false;
         }
     }
 
