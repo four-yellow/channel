@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0
+  Adjust: -0.8
 --- !u!1 &429039546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0
+  Adjust: -0.8
 --- !u!61 &440406263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1935,6 +1935,7 @@ GameObject:
   - component: {fileID: 663647797}
   - component: {fileID: 663647798}
   - component: {fileID: 663647799}
+  - component: {fileID: 663647800}
   m_Layer: 0
   m_Name: Bair p3 mid 3 (1)
   m_TagString: Untagged
@@ -2057,6 +2058,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9334776, y: 2.921135}
   m_EdgeRadius: 0
+--- !u!114 &663647800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663647795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overRide: 0
+  Adjust: -0.69
 --- !u!1 &664173065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4691,7 +4706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0
+  Adjust: -0.76
 --- !u!61 &1767277014
 BoxCollider2D:
   m_ObjectHideFlags: 0
