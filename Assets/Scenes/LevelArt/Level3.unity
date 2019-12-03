@@ -961,6 +961,8 @@ GameObject:
   - component: {fileID: 429039551}
   - component: {fileID: 429039550}
   - component: {fileID: 429039549}
+  - component: {fileID: 429039555}
+  - component: {fileID: 429039554}
   m_Layer: 0
   m_Name: Bair p3 mid 2
   m_TagString: Untagged
@@ -1084,7 +1086,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.2311373, y: -6.1947794}
+  m_Offset: {x: 6.182185, y: -6.0965242}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1095,7 +1097,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.202675, y: 1.9244785}
+  m_Size: {x: 6.300579, y: 0.7484417}
   m_EdgeRadius: 0
 --- !u!61 &429039552
 BoxCollider2D:
@@ -1110,7 +1112,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.5861006, y: -6.1947784}
+  m_Offset: {x: -6.6840053, y: -5.8764315}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1121,7 +1123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.909786, y: 1.2931671}
+  m_Size: {x: 9.713977, y: 0.65647316}
   m_EdgeRadius: 0
 --- !u!61 &429039553
 BoxCollider2D:
@@ -1136,7 +1138,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -8.557983, y: -5.287263}
+  m_Offset: {x: -8.460079, y: -5.2627754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1147,7 +1149,59 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.014035, y: 0.5829334}
+  m_Size: {x: 10.818226, y: 0.53395844}
+  m_EdgeRadius: 0
+--- !u!61 &429039554
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429039546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.9351807, y: -6.91424}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 28.13, y: 16.523628}
+    newSize: {x: 28.13, y: 16.523628}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.241308, y: 0.6355896}
+  m_EdgeRadius: 0
+--- !u!61 &429039555
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429039546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.060847, y: -6.636301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 28.13, y: 16.523628}
+    newSize: {x: 28.13, y: 16.523628}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.217868, y: 0.80220413}
   m_EdgeRadius: 0
 --- !u!1 &440406259
 GameObject:
@@ -1161,6 +1215,7 @@ GameObject:
   - component: {fileID: 440406261}
   - component: {fileID: 440406263}
   - component: {fileID: 440406262}
+  - component: {fileID: 440406264}
   m_Layer: 0
   m_Name: Bush White 2
   m_TagString: Untagged
@@ -1258,7 +1313,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.6118995, y: -0.2203942}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1269,7 +1324,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.66, y: 2.03}
+  m_Size: {x: 3.4362009, y: 1.5892116}
+  m_EdgeRadius: 0
+--- !u!61 &440406264
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440406259}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.6888559, y: -0.61220556}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.66, y: 2.03}
+    newSize: {x: 4.66, y: 2.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2822881, y: 0.80558884}
   m_EdgeRadius: 0
 --- !u!1 &442119742
 GameObject:
@@ -1372,7 +1453,7 @@ GameObject:
   - component: {fileID: 502951364}
   m_Layer: 0
   m_Name: Bair p3 bg
-  m_TagString: Untagged
+  m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,8 +1493,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1150358531
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08ed37a62b86db34a9e54873e49e0fc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1600,19 +1681,32 @@ Transform:
   m_Father: {fileID: 1091516740}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &536655506
-BoxCollider:
+--- !u!61 &536655506
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536655503}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.9272108}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.24, y: 2.27}
+    newSize: {x: 7.24, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2399993, y: 0.4989453, z: 0.2}
-  m_Center: {x: 0, y: -0.8855265, z: 0}
+  m_Size: {x: 7.24, y: 0.41557842}
+  m_EdgeRadius: 0
 --- !u!114 &536655507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,7 +1720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: -0.54
+  Adjust: -1
 --- !u!1 &595480136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641168298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.83, y: -0.29, z: 0}
+  m_LocalPosition: {x: -6.83, y: -0.39, z: 0}
   m_LocalScale: {x: 0.759858, y: 0.73242396, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1802,7 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: -0.66
+  Adjust: -0.86
 --- !u!61 &641168302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1816,7 +1910,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026015565, y: -2.7474747}
+  m_Offset: {x: -0.02601564, y: -2.647172}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1827,7 +1921,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5242593, y: 0.55505085}
+  m_Size: {x: 3.230015, y: 0.75565624}
   m_EdgeRadius: 0
 --- !u!1 &663647795
 GameObject:
@@ -1840,6 +1934,7 @@ GameObject:
   - component: {fileID: 663647796}
   - component: {fileID: 663647797}
   - component: {fileID: 663647798}
+  - component: {fileID: 663647799}
   m_Layer: 0
   m_Name: Bair p3 mid 3 (1)
   m_TagString: Untagged
@@ -1923,7 +2018,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7551323}
+  m_Offset: {x: 0.04480827, y: -1.3805755}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1934,7 +2029,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.07, y: 2.9397352}
+  m_Size: {x: 5.980384, y: 1.4108722}
+  m_EdgeRadius: 0
+--- !u!61 &663647799
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663647795}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5824946, y: -0.76443243}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.07, y: 4.45}
+    newSize: {x: 6.07, y: 4.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9334776, y: 2.921135}
   m_EdgeRadius: 0
 --- !u!1 &664173065
 GameObject:
@@ -1951,6 +2072,7 @@ GameObject:
   - component: {fileID: 664173070}
   - component: {fileID: 664173069}
   - component: {fileID: 664173068}
+  - component: {fileID: 664173073}
   m_Layer: 0
   m_Name: Bair p3 mid 1
   m_TagString: Untagged
@@ -2074,7 +2196,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3549404, y: -1.8150253}
+  m_Offset: {x: -0.18339562, y: -1.5943584}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2085,7 +2207,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6941156, y: 2.0142908}
+  m_Size: {x: 4.351026, y: 1.572957}
   m_EdgeRadius: 0
 --- !u!61 &664173071
 BoxCollider2D:
@@ -2138,6 +2260,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 6.350492, y: 1.7775545}
+  m_EdgeRadius: 0
+--- !u!61 &664173073
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664173065}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024506211, y: -2.6725438}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.19, y: 5.96}
+    newSize: {x: 9.19, y: 5.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.573273, y: 0.61501265}
   m_EdgeRadius: 0
 --- !u!1001 &666558709
 PrefabInstance:
@@ -2324,7 +2472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: -0.59
+  Adjust: -0.8
 --- !u!61 &954000663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2469,7 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0
+  Adjust: -0.9
 --- !u!61 &1020351315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3021,7 +3169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.9316863}
+  m_Offset: {x: 0, y: -0.8620052}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3032,7 +3180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.24, y: 0.40662736}
+  m_Size: {x: 7.24, y: 0.54598963}
   m_EdgeRadius: 0
 --- !u!114 &1128243731
 MonoBehaviour:
@@ -3047,7 +3195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: -0.81
+  Adjust: -0.76
 --- !u!1 &1177592588
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,6 +3361,7 @@ GameObject:
   - component: {fileID: 1292401300}
   - component: {fileID: 1292401303}
   - component: {fileID: 1292401302}
+  - component: {fileID: 1292401304}
   m_Layer: 0
   m_Name: Bair p3 mid 3
   m_TagString: Untagged
@@ -3296,7 +3445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0.27
+  Adjust: -0.49
 --- !u!61 &1292401303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3310,7 +3459,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.2281246}
+  m_Offset: {x: -0.04895258, y: -1.2526131}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3321,7 +3470,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.07, y: 1.6662588}
+  m_Size: {x: 5.188859, y: 1.2254705}
+  m_EdgeRadius: 0
+--- !u!61 &1292401304
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292401299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024476051, y: -1.3223648}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.07, y: 4.45}
+    newSize: {x: 6.07, y: 4.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.021048, y: 0.7277899}
   m_EdgeRadius: 0
 --- !u!1001 &1327665824
 PrefabInstance:
@@ -3395,6 +3570,31 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931985, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931985, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931985, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5444999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931985, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5789961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721935642156931985, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7169812
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a4ede82516b645629dc8dfa7c47d1a4, type: 3}
 --- !u!1 &1381150962
@@ -3429,7 +3629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0
+  Adjust: -0.9
 --- !u!61 &1381150964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4029,6 +4229,10 @@ GameObject:
   - component: {fileID: 1694241512}
   - component: {fileID: 1694241511}
   - component: {fileID: 1694241510}
+  - component: {fileID: 1694241515}
+  - component: {fileID: 1694241514}
+  - component: {fileID: 1694241516}
+  - component: {fileID: 1694241517}
   m_Layer: 0
   m_Name: Bair p3 fg
   m_TagString: Untagged
@@ -4049,7 +4253,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.958146}
+  m_Offset: {x: -13.331477, y: -3.958146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4060,7 +4264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.221416, y: 1.633707}
+  m_Size: {x: 5.558462, y: 1.633707}
   m_EdgeRadius: 0
 --- !u!114 &1694241511
 MonoBehaviour:
@@ -4075,7 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overRide: 0
-  Adjust: 0.33
+  Adjust: -0.9
 --- !u!212 &1694241512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4139,6 +4343,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1694241514
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694241509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.424859, y: -4.3890314}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 32.221416, y: 9.55}
+    newSize: {x: 32.221416, y: 9.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.4687557, y: 0.7719364}
+  m_EdgeRadius: 0
+--- !u!61 &1694241515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694241509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -9.655523, y: -3.5800114}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 32.221416, y: 9.55}
+    newSize: {x: 32.221416, y: 9.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.91037, y: 0.9200821}
+  m_EdgeRadius: 0
+--- !u!61 &1694241516
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694241509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.552521, y: -4.0650406}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 32.221416, y: 9.55}
+    newSize: {x: 32.221416, y: 9.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4025545, y: 0.6362953}
+  m_EdgeRadius: 0
+--- !u!61 &1694241517
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694241509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 13.633186, y: -4.3589}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 32.221416, y: 9.55}
+    newSize: {x: 32.221416, y: 9.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.3676186, y: 0.8321991}
+  m_EdgeRadius: 0
 --- !u!1 &1726018717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,6 +4457,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1726018719}
   - component: {fileID: 1726018718}
+  - component: {fileID: 1726018720}
+  - component: {fileID: 1726018721}
   m_Layer: 0
   m_Name: Bair Berry Tree
   m_TagString: Untagged
@@ -4219,6 +4529,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1726018720
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726018717}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04901266, y: -1.5201519}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.08, y: 3.46}
+    newSize: {x: 3.08, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4333086, y: 0.41969633}
+  m_EdgeRadius: 0
+--- !u!114 &1726018721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726018717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37304735a6fc94aba9a3e74700bc1208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overRide: 0
+  Adjust: -0.9
 --- !u!1 &1767277009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,6 +4581,7 @@ GameObject:
   - component: {fileID: 1767277010}
   - component: {fileID: 1767277013}
   - component: {fileID: 1767277012}
+  - component: {fileID: 1767277014}
   m_Layer: 0
   m_Name: Bush 3 (3)
   m_TagString: Untagged
@@ -4314,7 +4665,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.8690386}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4325,7 +4676,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.24, y: 2.27}
+  m_Size: {x: 7.24, y: 0.5319229}
   m_EdgeRadius: 0
 --- !u!114 &1767277013
 MonoBehaviour:
@@ -4341,6 +4692,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overRide: 0
   Adjust: 0
+--- !u!61 &1767277014
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767277009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12207484, y: -0.18622315}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.24, y: 2.27}
+    newSize: {x: 7.24, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.9439745, y: 1.8975537}
+  m_EdgeRadius: 0
 --- !u!4 &1823803757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4693595040378473714, guid: 64f4b1555f4014f6f9fe0fae084264cb,
