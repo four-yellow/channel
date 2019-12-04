@@ -17,22 +17,47 @@ public class DialogueScript : MonoBehaviour
     GameObject player;
     UseKey keyScript;
 
+    GameObject parent;
+    ParentMove parentScript;
+    public bool parentZone;
+
+    private string[] sentences; // array of sentences to be used
+
     [TextArea]
-    public string[] sentences; // array of sentences
+    public string[] sentences1; // array of sentences
+    [TextArea]
+    public string[] sentences2; // array of sentences
 
     public int dialogueIndex; // which sentence you're on
 
     private void Start()
     {
+        sentences = sentences1;
+
         player = GameObject.Find("Player");
+        parent = GameObject.Find("parent");
+
         keyScript = player.GetComponent<UseKey>();
         speakable = keyScript.parentSpeakable;
 
+        parentScript = parent.GetComponent<ParentMove>();
+        parentZone = parentScript.parentInZone2;
     }
     //starts the speech bubble if you press space
     private void Update()
     {
         speakable = keyScript.parentSpeakable;
+        parentZone = parentScript.parentInZone2;
+
+        if (parentZone == true)
+        {
+            sentences = sentences2;
+        }
+        else
+        {
+            sentences = sentences1;
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == false && speakable)
         {

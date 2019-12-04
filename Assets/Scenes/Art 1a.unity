@@ -1630,21 +1630,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1709291402}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: speechBubble
-      value: 
-      objectReference: {fileID: 588864623}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 125530227}
     - target: {fileID: 1730609498580123759, guid: c224989af1c0940c58c7ff7c6c7c4f92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1699,6 +1684,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences1.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1709291402}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: speechBubble
+      value: 
+      objectReference: {fileID: 588864623}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 125530227}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences1.Array.data[0]
+      value: this is the first one
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences1.Array.data[1]
+      value: parent not in zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences2.Array.data[0]
+      value: second one
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: sentences2.Array.data[1]
+      value: IM IN THE ZONE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c224989af1c0940c58c7ff7c6c7c4f92, type: 3}

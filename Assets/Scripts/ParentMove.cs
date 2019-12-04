@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ParentMove : MonoBehaviour
 {
+    public bool parentInZone2;
+
     [System.Serializable]
     public struct WayPoint
     {
@@ -51,17 +53,17 @@ public class ParentMove : MonoBehaviour
         h.Val = Path[count].startHungry;
     }
 
-    private bool AllDisabled (GameObject[] objects)
+    private bool AllDisabled(GameObject[] objects)
     {
         foreach (GameObject g in objects) { if ((g.activeInHierarchy) == true) return false; }
         return true;
-            
+
     }
 
     private void Update()
     {
         Physics2D.queriesStartInColliders = false;
-        if (!h.Val && count<parentMoveToXY.Length)
+        if (!h.Val && count < parentMoveToXY.Length)
         {
             upBound = Path[count].y + (float).1;
             downBound = Path[count].y - (float).1;
@@ -78,7 +80,7 @@ public class ParentMove : MonoBehaviour
                 if (AllDisabled(Path[count].obstacles) /*&& !obstacleInWay*/)
                     transform.Translate(direction * speed * Time.deltaTime);
             }
-            else { count++;  if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
+            else { count++; if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
 
         }
     }
@@ -87,6 +89,22 @@ public class ParentMove : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, direction);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("zone2"))
+        {
+            parentInZone2 = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("zone2"))
+        {
+            parentInZone2 = false;
+        }
     }
 }
 
