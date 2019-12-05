@@ -1451,6 +1451,7 @@ GameObject:
   - component: {fileID: 502951366}
   - component: {fileID: 502951365}
   - component: {fileID: 502951364}
+  - component: {fileID: 502951367}
   m_Layer: 0
   m_Name: Bair p3 bg
   m_TagString: background
@@ -1599,6 +1600,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.363407, y: 3.7461681}
   m_EdgeRadius: 0
+--- !u!114 &502951367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502951361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b76f3e0a651b44b2a60b076900a6452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g: {fileID: 4123277045874368248, guid: f6a5393151ace4265b06df776de2a78f, type: 3}
 --- !u!1 &536655503
 GameObject:
   m_ObjectHideFlags: 0
