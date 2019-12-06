@@ -3641,6 +3641,26 @@ PrefabInstance:
       propertyPath: parentMoveToXY.Array.data[0].walls.Array.data[0]
       value: 
       objectReference: {fileID: 1140000030}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[0]
+      value: Don't look so sad, child. I'm fine, really. Just a bit tired.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[1]
+      value: There's nothing that a Bair can't bear!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[2]
+      value: We'll find our way out of here soon enough.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719dcbe0da3804b65a79668712a4c57e, type: 3}
 --- !u!1001 &2017857317

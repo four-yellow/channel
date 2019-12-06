@@ -1406,6 +1406,27 @@ PrefabInstance:
       propertyPath: parentMoveToXY.Array.data[0].game
       value: 
       objectReference: {fileID: 434041143}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[0]
+      value: Brrr...Looks like it's getting colder.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[1]
+      value: '*Huff* *Huff* I don''t have as much energy as I used too -- Oh but don''t
+        worry about me.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[2]
+      value: I'll be fine if I just...rest here for a moment...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719dcbe0da3804b65a79668712a4c57e, type: 3}
 --- !u!1 &1055526510
