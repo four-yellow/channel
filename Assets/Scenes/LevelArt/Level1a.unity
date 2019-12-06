@@ -2349,6 +2349,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237320, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237320, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7527145
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142570762706237320, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7527145
+      objectReference: {fileID: 0}
     - target: {fileID: 3142570762706237321, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
       propertyPath: parentMoveToXY.Array.size
@@ -2369,21 +2384,6 @@ PrefabInstance:
       propertyPath: parentMoveToXY.Array.data[0].walls.Array.data[0]
       value: 
       objectReference: {fileID: 1150540180}
-    - target: {fileID: 8671659751610225379, guid: 719dcbe0da3804b65a79668712a4c57e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8671659751610225379, guid: 719dcbe0da3804b65a79668712a4c57e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8671659751610225405, guid: 719dcbe0da3804b65a79668712a4c57e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
       propertyPath: sentences1.Array.size
@@ -2418,6 +2418,21 @@ PrefabInstance:
         type: 3}
       propertyPath: sentences1.Array.data[2]
       value: I'm sure we'll find our way out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671659751610225379, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671659751610225379, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671659751610225405, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671659752708602136, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
