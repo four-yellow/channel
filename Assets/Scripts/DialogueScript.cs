@@ -14,6 +14,8 @@ public class DialogueScript : MonoBehaviour
 
     public bool speakable;
 
+    private bool IsTalking;
+
     GameObject player;
     UseKey keyScript;
 
@@ -59,13 +61,13 @@ public class DialogueScript : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == false && speakable)
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == false && speakable && !IsTalking)
         {
             speechBubble.SetActive(true);
             StartDialogue();
             dialogueStarted = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == true && speakable)
+        else if (Input.GetKeyDown(KeyCode.Space) && dialogueStarted == true && speakable && !IsTalking)
         {
             ContinueDialogue();
         }
@@ -74,17 +76,21 @@ public class DialogueScript : MonoBehaviour
     public void StartDialogue()
     {
         StartCoroutine("TypeDialogue");
+        IsTalking = true;
     }
 
     //prints out letters of a sentence one by one
     private IEnumerator TypeDialogue()
     {
+        dialogueText.text = sentences[dialogueIndex];
+        dialogueText.maxVisibleCharacters = 0;
         foreach (char letter in sentences[dialogueIndex])
         {
-            dialogueText.text += letter;
+            //dialogueText.text += letter;
+            dialogueText.maxVisibleCharacters++;
             yield return new WaitForSeconds(typingSpeed);
         }
-
+        IsTalking = false;
         continueButton.SetActive(true);
     }
 
@@ -97,6 +103,7 @@ public class DialogueScript : MonoBehaviour
         {
             dialogueIndex++;
             dialogueText.text = string.Empty;
+            IsTalking = true;
             StartCoroutine("TypeDialogue");
         }
         else

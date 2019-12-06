@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3142570762706237318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.39, y: 2.57, z: 0}
-  m_LocalScale: {x: 1, y: 1.572, z: 1.572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8671659751610225379}
   - {fileID: 7913813330831620447}
@@ -75,8 +75,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 920545040df204c698b7cf87134ebbb2, type: 3}
-  m_Color: {r: 1, g: 0.3915094, b: 0.3915094, a: 1}
+  m_Sprite: {fileID: 4531506485806338170, guid: ef41971e09edc8d4ebe505adc4791737,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1.08, y: 2.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.6}
+  m_Size: {x: 0.8, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &3142570762706237321
 MonoBehaviour:
@@ -145,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877eead018c1d4ff4a94a1528a534bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentInZone2: 0
   parentMoveToXY: []
   h: {fileID: 11400000, guid: 86999cc13ac734d7583780ee3c23e2a5, type: 2}
 --- !u!114 &6373046233297181448
@@ -173,10 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speech Bubble
       objectReference: {fileID: 0}
-    - target: {fileID: 4040359632124577177, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+    - target: {fileID: 4040359631527029125, guid: 7fb7cbbc6346d4395bb555f7d5658092,
         type: 3}
-      propertyPath: m_TagString
-      value: button
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4040359631527029147, guid: 7fb7cbbc6346d4395bb555f7d5658092,
         type: 3}
@@ -233,25 +235,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4040359631527029147, guid: 7fb7cbbc6346d4395bb555f7d5658092,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.27480915
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040359631527029147, guid: 7fb7cbbc6346d4395bb555f7d5658092,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.27480915
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040359631527029146, guid: 7fb7cbbc6346d4395bb555f7d5658092,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1966222141
-      objectReference: {fileID: 0}
     - target: {fileID: 4040359631527029146, guid: 7fb7cbbc6346d4395bb555f7d5658092,
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359632124577182, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.6486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359632124577182, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 107.6125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359632124577177, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_TagString
+      value: button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359632124577177, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359632685220448, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8464315193897829102, guid: bf341918ed32b44ee8df3ee0086ad51a,
+        type: 2}
+    - target: {fileID: 4040359632685220448, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4040359632638408278, guid: 7fb7cbbc6346d4395bb555f7d5658092,
         type: 3}
@@ -262,6 +280,64 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934599, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 107.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934599, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934599, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934599, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_text
+      value: 'Continue
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8464315193897829102, guid: bf341918ed32b44ee8df3ee0086ad51a,
+        type: 2}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040359633073934596, guid: 7fb7cbbc6346d4395bb555f7d5658092,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fb7cbbc6346d4395bb555f7d5658092, type: 3}
@@ -307,21 +383,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 8671659752708602136}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: speechBubble
-      value: 
-      objectReference: {fileID: 8671659751610225405}
-    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
-        type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 8671659752211988193}
     - target: {fileID: 1730609498580123759, guid: c224989af1c0940c58c7ff7c6c7c4f92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,6 +448,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6361323
       objectReference: {fileID: 0}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 8671659752708602136}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: speechBubble
+      value: 
+      objectReference: {fileID: 8671659751610225405}
+    - target: {fileID: 1730609498580123744, guid: c224989af1c0940c58c7ff7c6c7c4f92,
+        type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 8671659752211988193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c224989af1c0940c58c7ff7c6c7c4f92, type: 3}
 --- !u!4 &7913813330831620447 stripped

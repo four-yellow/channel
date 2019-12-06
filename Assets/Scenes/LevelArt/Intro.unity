@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 346861313}
   - component: {fileID: 346861312}
   - component: {fileID: 346861311}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 473532323}
   - component: {fileID: 473532322}
   - component: {fileID: 473532321}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 555180513}
   - component: {fileID: 555180515}
   - component: {fileID: 555180514}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1372,7 +1372,7 @@ Transform:
   - {fileID: 346861314}
   - {fileID: 1444438112}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896286494
 GameObject:
@@ -1936,6 +1936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 4798897438175259835, guid: af63ca86f5dc549b9ae404fbaefdb71e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4798897438175259829, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1974,7 +1979,7 @@ PrefabInstance:
     - target: {fileID: 4798897438175259829, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4798897438175259829, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
@@ -1991,10 +1996,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798897438116218958, guid: af63ca86f5dc549b9ae404fbaefdb71e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4798897437275728857, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798897437275728857, guid: af63ca86f5dc549b9ae404fbaefdb71e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af63ca86f5dc549b9ae404fbaefdb71e, type: 3}
@@ -3204,6 +3219,26 @@ PrefabInstance:
       propertyPath: parentMoveToXY.Array.data[0].game
       value: 
       objectReference: {fileID: 1630122564}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[0]
+      value: Good morning, Bair. :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[1]
+      value: It's such a beautiful morning, isn't it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913813330831620432, guid: 719dcbe0da3804b65a79668712a4c57e,
+        type: 3}
+      propertyPath: sentences1.Array.data[2]
+      value: Let's enjoy this day while it lasts. Don't go off into the woods, okay?
+      objectReference: {fileID: 0}
     - target: {fileID: 3142570762706237320, guid: 719dcbe0da3804b65a79668712a4c57e,
         type: 3}
       propertyPath: m_SortingOrder
@@ -3240,7 +3275,7 @@ Transform:
   m_Children:
   - {fileID: 1630122565}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023950818
 GameObject:

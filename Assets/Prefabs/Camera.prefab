@@ -61,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -93,6 +93,7 @@ MonoBehaviour:
   xMax: 0
   yMin: 0
   yMax: 0
+  CameraLock: 0
 --- !u!81 &7615103836475971435
 AudioListener:
   m_ObjectHideFlags: 0

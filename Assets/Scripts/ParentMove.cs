@@ -17,9 +17,9 @@ public class ParentMove : MonoBehaviour
     public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
     private int count;
-    //private bool obstacleInWay; // raycast hit
+    private bool obstacleInWay; // raycast hit
     private Vector3 direction;
-    //public float rayDistance = 2f;
+    public float rayDistance = 2f;
     public boolRef h;
 
     //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
@@ -72,12 +72,12 @@ public class ParentMove : MonoBehaviour
 
             Vector3 checkpoint = new Vector3(Path[count].x, Path[count].y);
             direction = (checkpoint - transform.position).normalized;
-            //obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
+            obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
 
             if (transform.position.y >= upBound || transform.position.y <= downBound ||
                 transform.position.x >= rightBound || transform.position.x <= leftBound)
             {
-                if (AllDisabled(Path[count].obstacles) /*&& !obstacleInWay*/)
+                if (AllDisabled(Path[count].obstacles) && !obstacleInWay)
                     transform.Translate(direction * speed * Time.deltaTime);
             }
             else { count++; if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
