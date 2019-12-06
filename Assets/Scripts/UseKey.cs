@@ -9,6 +9,8 @@ using UnityEngine;
  */
 public class UseKey : MonoBehaviour
 {
+    [SerializeField]
+    public GameObject HoldBox; //Where the held object is displayed.
     public bool grabbed; // whether the player is holding a key
     public static bool unlockable; // whether the player can destroy a wall
     public bool feedable; // whether the player can feed parent
@@ -120,8 +122,12 @@ public class UseKey : MonoBehaviour
 
             if (grabbed)                                    // moves key to the holdpoint of the player
             {
-                closestKey.GetComponent<SpriteRenderer>().sortingOrder = this.GetComponent<SpriteRenderer>().sortingOrder + 1;
+                closestKey.GetComponent<SpriteRenderer>().sortingLayerName ="Upper Realm" ;
                 closestKey.transform.position = holdpoint.position;
+            }
+            else
+            {
+                closestKey.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
             }
 
             if (unlockable && Input.GetKeyDown(KeyCode.E) && closestWall != null && closestKey.GetComponent<Food_tag>() == null) // destroys a wall and uses up key when E is pressed if unlockable
@@ -142,6 +148,7 @@ public class UseKey : MonoBehaviour
     {
         closestKey.GetComponent<LayerManager>().overRide = b;
         grabbed = b;
+        HoldBox.SetActive(b);
         if (b) SoundManagerScript.PlaySound("BairPickup");
         else SoundManagerScript.PlaySound("BairDrop");
     }
