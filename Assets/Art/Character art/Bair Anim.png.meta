@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: -8753246921495943732
     second: Bair Anim_3
+  - first:
+      213: -4966684176500241741
+    second: Bair Anim_4
+  - first:
+      213: 4996136074494844904
+    second: Bair Anim_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -102,6 +108,48 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ab0ce1ed3b28242a525b43f59007cc
+      internalID: 7055939173025026138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bair Anim_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3741f67869328894dbe330b5e4b25316
+      internalID: -7507761480151629432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bair Anim_2
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 174
         width: 94
         height: 174
@@ -112,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79b9e065789d55249b79927d0afa9582
-      internalID: 7055939173025026138
+      spriteID: a6afbb504d4f7e5408b25bf2735b0f39
+      internalID: 5347905833209668420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bair Anim_1
+      name: Bair Anim_3
       rect:
         serializedVersion: 2
         x: 94
@@ -133,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb9574e69606bd64689a7d4f777e381a
-      internalID: -7507761480151629432
+      spriteID: e652e51dfd23797459e3da1738d6eb49
+      internalID: -8753246921495943732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bair Anim_2
+      name: Bair Anim_4
       rect:
         serializedVersion: 2
         x: 0
@@ -154,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9138fc6ad2249d647a0029b4c8ecde5c
-      internalID: 5347905833209668420
+      spriteID: 2be73f62faa78654983661342f7fd537
+      internalID: -4966684176500241741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bair Anim_3
+      name: Bair Anim_5
       rect:
         serializedVersion: 2
         x: 94
@@ -175,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1aff59cf2024ae49b191ce54416fd85
-      internalID: -8753246921495943732
+      spriteID: 12f63f3089dd0f34bbb5c4fd98aa849b
+      internalID: 4996136074494844904
       vertices: []
       indices: 
       edges: []

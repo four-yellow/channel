@@ -8,6 +8,27 @@ TextureImporter:
   - first:
       213: 4531506485806338170
     second: Bear Anim_1
+  - first:
+      213: -6977779470149931230
+    second: Bear Anim_2
+  - first:
+      213: -6744706035982053941
+    second: Bear Anim_3
+  - first:
+      213: 3635798449858542764
+    second: Bear Anim_4
+  - first:
+      213: 3918634459196662930
+    second: Bear Anim_5
+  - first:
+      213: 9057841483931572950
+    second: Bear Anim_6
+  - first:
+      213: 5984495980688706189
+    second: Bear Anim_7
+  - first:
+      213: 3247949357543225211
+    second: Bear Anim_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,6 +117,132 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 540
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2822ece759551f4418ae12bdb15af251
+      internalID: 5024831638276589417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 540
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e2091abb9c9be4889d9c01c03bf326
+      internalID: 4531506485806338170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 540
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed273fab0663764c83aac5721faa831
+      internalID: -6977779470149931230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfda587e0f1a51044acd83f071918170
+      internalID: -6744706035982053941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 270
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147b5ce6756136b46bc099628c0da476
+      internalID: 3635798449858542764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 270
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91331314d00f6d646be0e233b2d4a9c3
+      internalID: 3918634459196662930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_6
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 108
         height: 270
@@ -106,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3df97e1bea1b34026a08e87f2b7c583e
-      internalID: 5024831638276589417
+      spriteID: defbf5ce23667264585356a4382bc29a
+      internalID: 9057841483931572950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bear Anim_1
+      name: Bear Anim_7
       rect:
         serializedVersion: 2
         x: 108
@@ -127,8 +274,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c004880d282b4bf7b2d9ea1e7dbaec3
-      internalID: 4531506485806338170
+      spriteID: 079ad085d48e7b048b06fffe26a28a3b
+      internalID: 5984495980688706189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear Anim_8
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 108
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b369dcd91db00409f2798936d6860c
+      internalID: 3247949357543225211
       vertices: []
       indices: 
       edges: []
