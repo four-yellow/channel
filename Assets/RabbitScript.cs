@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RabbitScript : MonoBehaviour
 {
-    private float speed = 3;
+    private float speed = 4;
     public GameObject[] rabbitMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
     private int count;

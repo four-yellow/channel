@@ -13,7 +13,7 @@ public class CameraHere : MonoBehaviour
     private float MaxX;
 
 
-    private float Speed = 2.0f;
+    private float Speed = 4.0f;
 
     void Start()
     {
