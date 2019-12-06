@@ -1161,12 +1161,12 @@ PrefabInstance:
     - target: {fileID: 4693595040378473714, guid: 64f4b1555f4014f6f9fe0fae084264cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 137.6
+      value: 117.4
       objectReference: {fileID: 0}
     - target: {fileID: 4693595040378473714, guid: 64f4b1555f4014f6f9fe0fae084264cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.831
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4693595040378473714, guid: 64f4b1555f4014f6f9fe0fae084264cb,
         type: 3}
@@ -1335,7 +1335,7 @@ PrefabInstance:
     - target: {fileID: 4798897438175259835, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4798897438175259829, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
@@ -2583,11 +2583,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
-        type: 3}
-      propertyPath: orthographic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5993194500742913130, guid: 930b56023e78f45c1bbd4592ce891680,
         type: 3}
       propertyPath: player
@@ -2627,6 +2622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: smoothTime
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530017566332707354, guid: 930b56023e78f45c1bbd4592ce891680,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b56023e78f45c1bbd4592ce891680, type: 3}
@@ -3833,7 +3833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1910187812
 SpriteRenderer:
   m_ObjectHideFlags: 0
