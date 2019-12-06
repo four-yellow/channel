@@ -75,7 +75,7 @@ public class DialogueScript : MonoBehaviour
 
     public void StartDialogue()
     {
-        StartCoroutine("TypeDialogue");
+        StartCoroutine(TypeDialogue());
         IsTalking = true;
     }
 
@@ -104,7 +104,7 @@ public class DialogueScript : MonoBehaviour
             dialogueIndex++;
             dialogueText.text = string.Empty;
             IsTalking = true;
-            StartCoroutine("TypeDialogue");
+            StartCoroutine(TypeDialogue());
         }
         else
         {
