@@ -13,13 +13,13 @@ public class ParentMove : MonoBehaviour
         public GameObject[] walls;
         public bool bl;
     }
-    private float speed = 3;
+    private float speed = 2;
     public WayPoint[] parentMoveToXY;
     private float upBound, downBound, rightBound, leftBound;
     private int count;
     private bool obstacleInWay; // raycast hit
     private Vector3 direction;
-    public float rayDistance = 2f;
+    public float rayDistance = 1f;
     public boolRef h;
 
     //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
