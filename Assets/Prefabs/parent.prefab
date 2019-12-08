@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3142570762706237322}
   - component: {fileID: 3142570762706237321}
   - component: {fileID: 6373046233297181448}
+  - component: {fileID: 2933517081934108362}
   m_Layer: 0
   m_Name: parent
   m_TagString: parent
@@ -148,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentInZone2: 0
   parentMoveToXY: []
+  rayDistance: 1
   h: {fileID: 11400000, guid: 86999cc13ac734d7583780ee3c23e2a5, type: 2}
 --- !u!114 &6373046233297181448
 MonoBehaviour:
@@ -163,6 +165,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overRide: 0
   Adjust: -0.8
+--- !u!95 &2933517081934108362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142570762706237318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3a83d17646e28f4491224f19f150520, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4631337813528853368
 PrefabInstance:
   m_ObjectHideFlags: 0

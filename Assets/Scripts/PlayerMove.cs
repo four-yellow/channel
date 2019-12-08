@@ -37,19 +37,19 @@ public class PlayerMove : MonoBehaviour
         else
         {
             Mine.SetBool("Walking", true);
-            if(Input.GetKey(KeyCode.UpArrow))
+            if(movement.y > 0 ) //movement.y = 1
             {
                 direction = 3;
             }
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (movement.y < 0) //movement.y = -1
             {
                 direction = 0;
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (movement.x > 0) //movement.x = 1
             {
                 direction = 1;
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (movement.x < 0) //movement.x = -1
             {
                 direction = 2;
             }

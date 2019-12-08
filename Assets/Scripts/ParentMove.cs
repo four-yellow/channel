@@ -21,6 +21,9 @@ public class ParentMove : MonoBehaviour
     private Vector3 direction;
     public float rayDistance = 1f;
     public boolRef h;
+    Vector2 movement;
+    private Animator Mine;
+    private int dir;
 
     //We will condense our X,Y coordinates into a new struct (as well as record whether or not the parent
     //is hungry at the start of this path.
@@ -49,6 +52,8 @@ public class ParentMove : MonoBehaviour
             Path[i].obstacles = parentMoveToXY[i].walls;
         }
 
+        Mine = GetComponent<Animator>();
+
         count = 0;
         h.Val = Path[count].startHungry;
     }
@@ -62,6 +67,31 @@ public class ParentMove : MonoBehaviour
 
     private void Update()
     {
+        //Sending directional movement info to the animator
+        movement.x = GetComponent<Rigidbody2D>().velocity.x;
+        movement.y = GetComponent<Rigidbody2D>().velocity.y;
+        if ((movement.magnitude) <= 0.0f) Mine.SetBool("WalkingB", false);
+        else
+        {
+            Mine.SetBool("WalkingB", true);
+            if (movement.y > 0) //movement.y = 1
+            {
+                dir = 3;
+            }
+            else if (movement.y < 0) //movement.y = -1
+            {
+                dir = 0;
+            }
+            else if (movement.x > 0) //movement.x = 1
+            {
+                dir = 1;
+            }
+            else if (movement.x < 0) //movement.x = -1
+            {
+                dir = 2;
+            }
+            Mine.SetInteger("DirectionB", dir);
+        }
         Physics2D.queriesStartInColliders = false;
         if (!h.Val && count < parentMoveToXY.Length)
         {
