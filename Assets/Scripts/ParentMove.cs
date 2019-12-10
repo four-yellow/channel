@@ -68,6 +68,8 @@ public class ParentMove : MonoBehaviour
     private void Update()
     {
         //Sending directional movement info to the animator
+        /* NOTE: THIS CODE DOES NOT WORK AS WE DO NOT APPLY VELOCITY TO THE RIGIDBODY TO MOVE THE PARENT
+         * 
         movement.x = GetComponent<Rigidbody2D>().velocity.x;
         movement.y = GetComponent<Rigidbody2D>().velocity.y;
         if ((movement.magnitude) <= 0.0f) Mine.SetBool("WalkingB", false);
@@ -92,6 +94,8 @@ public class ParentMove : MonoBehaviour
             }
             Mine.SetInteger("DirectionB", dir);
         }
+        */
+
         Physics2D.queriesStartInColliders = false;
         if (!h.Val && count < parentMoveToXY.Length)
         {
@@ -102,17 +106,36 @@ public class ParentMove : MonoBehaviour
 
             Vector3 checkpoint = new Vector3(Path[count].x, Path[count].y);
             direction = (checkpoint - transform.position).normalized;
+            
+
+
             obstacleInWay = Physics2D.Raycast(transform.position, direction, rayDistance);
 
             if (transform.position.y >= upBound || transform.position.y <= downBound ||
                 transform.position.x >= rightBound || transform.position.x <= leftBound)
             {
                 if (AllDisabled(Path[count].obstacles) && !obstacleInWay)
+                {
+                    Mine.SetBool("WalkingB", true);
+                    //We will calculate which direction to walk in here
+                    if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) //If we move x more than we do y then use x anims
+                    {
+                        if (direction.x > 0) Mine.SetInteger("DirectionB", 1);
+                        else Mine.SetInteger("DirectionB", 2);
+                    }
+                    else
+                    {
+                        if (direction.y > 0) Mine.SetInteger("DirectionB", 3);
+                        else Mine.SetInteger("DirectionB", 0);
+                    }
                     transform.Translate(direction * speed * Time.deltaTime);
+                }
+                else { Mine.SetBool("WalkingB", false); }
             }
             else { count++; if (count < parentMoveToXY.Length) h.Val = Path[count].startHungry; }
 
         }
+        else { Mine.SetBool("WalkingB", false); }
     }
 
     private void OnDrawGizmos()

@@ -680,6 +680,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798897437275728858, guid: af63ca86f5dc549b9ae404fbaefdb71e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.226
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798897437275728858, guid: af63ca86f5dc549b9ae404fbaefdb71e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4798897438116218954, guid: af63ca86f5dc549b9ae404fbaefdb71e,
         type: 3}
       propertyPath: m_SortingOrder
