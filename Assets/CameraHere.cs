@@ -12,6 +12,8 @@ public class CameraHere : MonoBehaviour
     private float MinX;
     private float MaxX;
 
+    public boolRef LezGooo;
+
 
     private float Speed = 4.0f;
 
@@ -34,6 +36,7 @@ public class CameraHere : MonoBehaviour
         float journeyLength = Vector3.Distance(start, end);
         float DistCovered;
         float fracOfJourney = 0.0f;
+        LezGooo.Val = true;
 
         while (fracOfJourney < 1.0f)
         {
@@ -44,6 +47,7 @@ public class CameraHere : MonoBehaviour
             Camera.transform.position = new Vector3(Mathf.Clamp(NewPos.x, MinX, MaxX), Mathf.Clamp(NewPos.y, MinY, MaxY), NewPos.z);
             yield return new WaitForSeconds(Time.deltaTime);
         }
+        LezGooo.Val = false;
 
 
         Camera.GetComponent<CameraControl>().CameraLock = false;

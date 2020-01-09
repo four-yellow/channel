@@ -1403,6 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 548207541}
   Player: {fileID: 2092498537}
+  LezGooo: {fileID: 11400000, guid: a0cf89f722a9e4e1f81682ce35635988, type: 2}
 --- !u!1001 &886085123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3029,11 +3030,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8883737042544584477, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 1442414633507266217, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
         type: 3}
       propertyPath: m_Enabled
@@ -3044,6 +3040,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5d2b09a56c3a73141b060a074bb19039, type: 2}
+    - target: {fileID: 8883737042544584477, guid: 2a4ede82516b645629dc8dfa7c47d1a4,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a4ede82516b645629dc8dfa7c47d1a4, type: 3}
 --- !u!1 &1653007974

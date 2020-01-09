@@ -94,6 +94,7 @@ MonoBehaviour:
   yMin: 0
   yMax: 0
   CameraLock: 0
+  InputToggle: {fileID: 11400000, guid: a0cf89f722a9e4e1f81682ce35635988, type: 2}
 --- !u!81 &7615103836475971435
 AudioListener:
   m_ObjectHideFlags: 0

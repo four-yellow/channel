@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed;
     Vector2 movement; // tracks direction the player is trying to move in. 
 
+
+    public boolRef NoInput;
     //Variables deemed irrelevant
     /*
     public float minHeight, maxHeight;
@@ -31,9 +33,13 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        if ((movement.magnitude) <= 0.0f) Mine.SetBool("Walking", false);
+        if (!NoInput.Val)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        
+        if (movement.magnitude <= 0.0f) Mine.SetBool("Walking", false);
         else
         {
             Mine.SetBool("Walking", true);

@@ -15,9 +15,11 @@ public class CameraControl : MonoBehaviour
     private Transform target;
     private SpriteRenderer spriteBounds;
     private float Velocity;
+    public boolRef InputToggle;
 
     void Start()
     {
+        if (CameraLock) InputToggle.Val = true;
         if (!CameraLock)
             transform.position = new Vector3(GameObject.FindWithTag("Player").transform.position.x,
                                              GameObject.FindWithTag("Player").transform.position.y, -6);
@@ -73,6 +75,7 @@ public class CameraControl : MonoBehaviour
             time -= Time.deltaTime;
             yield return null;
         }
+        InputToggle.Val = false;
         CameraLock = false;
     }
 

@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  NoInput: {fileID: 11400000, guid: a0cf89f722a9e4e1f81682ce35635988, type: 2}
   horDir: 0
   verDir: 0
 --- !u!114 &235730700372902708
